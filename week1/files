@@ -1,0 +1,10 @@
+total 73K
+drwxrwxrwx 0 fmertil fmertil  512 Jun 13 14:52 .
+drwxr-xr-x 0 fmertil fmertil  512 Jun 13 14:19 ..
+-rw-rw-rw- 1 fmertil fmertil    0 Jun 13 14:46 201402-citibike-tripdata.csv
+-rwxrwxrwx 1 fmertil fmertil  529 Jun 13 14:19 citibike.sh
+-rwxrwxrwx 1 fmertil fmertil  983 Jun 13 14:19 download_trips.sh
+-rw-rw-rw- 1 fmertil fmertil    0 Jun 13 14:52 files
+-rw-rw-rw- 1 fmertil fmertil  39K Jun 13 14:19 intro_command_line.ipynb
+-rw-rw-rw- 1 fmertil fmertil 5.4K Jun 13 14:19 README.md
+drwxrwxrwx 0 fmertil fmertil  512 Jun 13 14:19 students
