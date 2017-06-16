@@ -107,18 +107,84 @@ Install tools: [Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/
 	* Rstudio's [data wrangling cheatsheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 
-<!--
-  * Plotting
-    * Read the [data visualization](http://r4ds.had.co.nz/data-visualisation.html) of ["R for Data Science"](http://r4ds.had.co.nz) chapter and go over the included exercises
-    * Review Sean Anderson's [ggplot2 slides](http://seananderson.ca/courses/12-ggplot2/ggplot2_slides_with_examples.pdf) ([code]((http://github.com/seananderson/datawranglR)) and reproduce the ``diamonds`` plots in these slides.
-    * Bookmark Rstudio's [data visualization cheatsheet](http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf)
-    * Optionally do the free portion of DataCamp's [Data Visualization with ggplot2](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/) tutorial    
+## Plotting
+  * Review [visualization_with_ggplot2.ipynb](visualization_with_ggplot2.ipynb) for an introduction to data visualization with ggplot2
+
+# Day 4
+
+## Plotting (cont'd)
+
+  * Do DataCamp's [Data Visualization with ggplot2 (part 1)](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/) tutorial 
+  * Read chapter [3](http://r4ds.had.co.nz/data-visualisation.html) of [R for Data Science](http://r4ds.had.co.nz/)
+  * Modify and run the `download_trips.sh` script to grab all trip data from 2014 (use `dos2unix` to fix carriage return issues if they arise)
+  * Run the [load_trips.R](load_trips.R) file to generate `trips.RData`
+  * Write code in [plot_trips.R](plot_trips.R) to reproduce and extend the visualizations we made this morning using `trips.RData`
 
   * Additional references
+    * RStudio's [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+    * Sean Anderson's [ggplot2 slides](http://seananderson.ca/courses/12-ggplot2/ggplot2_slides_with_examples.pdf) ([code]((http://github.com/seananderson/datawranglR))) for more examples 
     * The [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/)
     * [Intro to ggplot2](http://superbobry.github.io/slides/ggplot2/) slides, with somewhat tricky navigation
     * [Visualizing Data with ggplot2](http://varianceexplained.org/RData/lessons/lesson2/)
     * The [official ggplot2 docs](http://docs.ggplot2.org/current/)
+    * Videos on [Visualizing Data with ggplot2](http://varianceexplained.org/RData/lessons/lesson2/)
+    * The [official ggplot2 docs](http://docs.ggplot2.org/current/)
+
+## Combining and reshaping data
+  * Review [combine_and_reshape_in_r.ipynb](combine_and_reshape_in_r.ipynb) on joins with dplyr and reshaping with tidyr
+
+# Day 5
+
+## Guest lecture: Computational Complexity
+  * [Sid Sen](http://www.cs.princeton.edu/~sssix/) gave a guest lecture on computational complexity, data structures, and algorithms. Some references:
+    * [Typed notes](https://github.com/jhofman/msd2017-notes/blob/master/lecture_3/lecture_3.pdf) that cover Sid's lecture
+    * A [beginner's guide](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/) to big-O notation
+    * Another [introduction to big-O](https://www.interviewcake.com/article/python/big-o-notation-time-and-space-complexity)
+    * The [big-O cheatsheet](http://bigocheatsheet.com/)
+    * A [table](http://modelingsocialdata.org/img/runtime_table.png) from [Kleinberg & Tardos](https://www.pearsonhighered.com/program/Kleinberg-Algorithm-Design/PGM319216.html) for translating asymptotic notation to typical runtimes on modern hardware
+    * Relevant Khan Academy videos:
+      * [Asymptotic notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
+      * [Big-O](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation) for upper bounds
+      * [Big-omega](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-big-omega-notation) for lower bounds
+      * [Big-theta](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-big-theta-notation) for tight bounds
+    * Hash tables on [Wikipedia](https://en.wikipedia.org/wiki/Hash_table) and [Spark Notes](http://www.sparknotes.com/cs/searching/hashtables/summary.html)
+    
+
+## More counting and plotting
+  * Use the [download_movielens.sh](download_movielens.sh) script to download the [MovieLens data](http://grouplens.org/datasets/movielens/)
+  * Fill in code in the [movielens.R](movielens.R) file to reproduce the plots from Wednesday's slides
+  * Sketch out (on paper) how to generate figure 2 from [The Anatomy of the Long Tail](https://5harad.com/papers/long_tail.pdf)
+  * Wrote code to do this in the last section of [movielens.R](movielens.R)
+
+## Combining and reshaping data (cont'd)
+  * Read chapters [12](http://r4ds.had.co.nz/tidy-data.html) and [13](http://r4ds.had.co.nz/relational-data.html)
+ of [R for Data Science](http://r4ds.had.co.nz) on tidyr and joins
+  * Do parts 1 and 2 of Datacamp's [Cleaning Data in R](https://www.datacamp.com/courses/cleaning-data-in-r) tutorial
+  * Additional references:
+    * The tidyr [vignette on tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+    * The dplyr [vignette on two-table verbs](https://cran.r-project.org/web/packages/dplyr/vignettes/two-table.html) for joins
+    * A [visual guide to joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+
+
+## Save your work
+  * Make sure to save your work and push it to GitHub. Do this in three steps:
+  	1. `git add` and `git commit` and new files to your local repository. (Omit large data files.)
+  	2. `git pull upstream master` to grab changes from this repository, and resolve any merge conflicts, commiting the final results.
+  	3. `git push origin master` to push things back up to your GitHub fork of the course repository. 
+
+
+<!--
+
+https://www.datacamp.com/courses/data-visualization-with-ggplot2-2
+
+https://www.datacamp.com/courses/exploratory-data-analysis-in-r-case-study
+
+ * Read chapters [7](http://r4ds.had.co.nz/exploratory-data-analysis.html) and [28](http://r4ds.had.co.nz/graphics-for-communication.html) in [R for Data Science](http://r4ds.had.co.nz/)
+
+https://www.datacamp.com/courses/intermediate-r
+https://www.datacamp.com/courses/writing-functions-in-r
+https://www.datacamp.com/courses/reporting-with-r-markdown
+
 -->
 
 
